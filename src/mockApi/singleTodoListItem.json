@@ -1,0 +1,33 @@
+{
+    "id": 2,
+    "projectId": null,
+    "todoListTitle": "To Do List In Json Server",
+    "details": "***The Details For To Do List In Json Server***",
+    "docURL": null,
+    "todoItemGetDtos": [
+        {
+            "todoItemId": 4,
+            "description": "This is the description four",
+            "notes": "",
+            "dueDate": "2017-10-10"
+        },
+        {
+            "todoItemId": 3,
+            "description": "This is the description three",
+            "notes": "This is the notes three",
+            "dueDate": "2017-10-10"
+        },
+        {
+            "todoItemId": 2,
+            "description": "This is the description two",
+            "notes": "This is the notes two",
+            "dueDate": "2017-10-10"
+        },
+        {
+            "todoItemId": 1,
+            "description": "This is the description one",
+            "notes": "This is the notes one",
+            "dueDate": "2017-10-10"
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+.signupError{
+  visibility: hidden;
+  color: red;
+
+  &--active {
+    visibility: visible;
+    background-color: #fffae5;
+    text-justify: auto;
+    border: 1px solid #ffeb99;
+    font-size: 15px;
+    font-weight: bold;
+    color: red;
+    text-align: center;
+  }
+  .linkName {
+    visibility: hidden;
+    text-decoration: underline;
+    &--active {
+      opacity: 1;
+      color: #002649;
+      align-items: center;
+      text-decoration: underline;
+    }
+  }
+  .linkStyle {
+    text-decoration: underline;
+    &--hideLink {
+      text-decoration: underline;
+      visibility: hidden;
+    }
+  }
+}

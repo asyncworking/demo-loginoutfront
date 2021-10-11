@@ -1,0 +1,78 @@
+@import "responsive";
+
+.profile{
+  color: #183957;
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 0;
+  h1{
+    padding-top: 40px;
+    display: flex;
+  }
+  &__line {
+    @include MQ(MD) {
+      display: none;
+    }
+    @include MQ(LG) {
+      display: block;
+    }
+    width: 80%;
+    height: 2px;
+    background-color: #000000;
+    margin-bottom: 0;
+  }
+}
+
+.inputContainer{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom:40px;
+  h3{
+    margin-bottom: 5px;
+    display: flex;
+  }
+  textarea{
+  font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+}
+}
+.subBtn{
+  @include MQ(MD) {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:40px;
+  }
+  @include MQ(LG) {
+    width: 30%;
+    margin-left: 10%;
+  }
+}
+
+.profileBox{
+  resize:none;
+  outline: none;
+  width:100%;
+  border-color: #d9dada;
+  padding:10px;
+  font-size: 100%;
+  border-radius: 5px;
+  &:focus{
+    transition:border linear .2s,box-shadow linear .5s;
+    -moz-transition:border linear .2s,-moz-box-shadow linear .2s;
+    -webkit-transition:border linear .2s,-webkit-box-shadow linear .2s;
+    outline:none;border-color:rgba(93,149,242,.75);
+    box-shadow:0 0 8px rgba(93,149,242,.105);
+    -moz-box-shadow:0 0 8px rgba(93,149,242,.5);
+    -webkit-box-shadow:0 0 8px rgba(93,149,242,3);
+  }
+}
+.errorMessage {
+  color: red;
+  float: left;
+}

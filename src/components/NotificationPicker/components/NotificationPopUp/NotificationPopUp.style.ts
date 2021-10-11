@@ -1,0 +1,88 @@
+import { createStyles, makeStyles } from '@material-ui/core/styles';
+
+export default makeStyles(() => createStyles({
+  modal__display: {
+    display: 'flex',
+    position: 'fixed',
+    top: '0',
+    bottom: '0',
+    left: '0',
+    right: '0',
+    backgroundColor: 'rgba(0,0,0,0.4)',
+    alignItems: 'center',
+    justifyContent: 'center',
+    zIndex: 10,
+  },
+  modal__hidden: {
+    opacity: '0',
+    zIndex: -10,
+    display: 'flex',
+    position: 'fixed',
+    top: '0',
+    bottom: '0',
+    left: '0',
+    right: '0',
+    backgroundColor: 'rgba(0,0,0,0.4)',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  modal_sheet: {
+    width: '35rem',
+    background: '#fff',
+    borderRadius: '0.8rem',
+    boxShadow: '0 5px 20px rgb(0 0 0 / 35%)',
+    maxHeight: '90vh',
+    maxWidth: '90vw',
+  },
+  modal_sheet__title: {
+    color: '#283c46',
+    margin: '0',
+
+  },
+  modal_sheet__scroller: {
+    overflowY: 'auto',
+    maxHeight: '70vh',
+    padding: '1.5rem 1.5rem 0 1.5rem',
+    borderBottom: '1px solid #e5e5e5',
+  },
+  group_selector: {
+    marginTop: '0.625rem',
+    marginBottom: '1rem',
+  },
+  group_selector_btn: {
+    color: '#1b6ac9',
+    textDecoration: 'underline',
+    border: '0',
+    fontSize: '16px',
+    background: 'none',
+    cursor: 'pointer',
+    padding: '0',
+  },
+  list_header: {
+    color: '#283c46',
+  },
+  modal_sheet__footer: {
+    padding: '1rem 1.5rem 1.5rem 1.5rem',
+  },
+  btn__save: {
+    borderColor: '#2da562',
+    color: '#fff',
+    padding: '8px 16px',
+    borderRadius: '1.5em',
+    textDecoration: 'none',
+    cursor: 'pointer',
+    textTransform: 'none',
+    fontSize: '16px',
+  },
+  btn__cancel: {
+    borderColor: '#2da562',
+    color: '#2da562',
+    padding: '8px 16px',
+    borderRadius: '1.5em',
+    textDecoration: 'none',
+    cursor: 'pointer',
+    textTransform: 'none',
+    fontSize: '16px',
+    marginLeft: '1rem',
+  },
+}));

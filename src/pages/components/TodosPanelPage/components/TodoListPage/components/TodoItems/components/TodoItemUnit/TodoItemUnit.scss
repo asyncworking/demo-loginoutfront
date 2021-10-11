@@ -1,0 +1,139 @@
+@import "src/pages/components/TodosPanelPage/components/responsive";
+
+@mixin checkbox_base {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1.4em;
+  height: 1.4em;
+  border: 1px solid rgba(0,0,0,0.25);
+  border-radius: 0.3em;
+  vertical-align: top;
+  padding: 3px;
+}
+
+.todoItem_remaining {
+  margin-top: 5px;
+  min-height: 00.25em;
+  padding-left: 0;
+}
+
+.todoItem {
+  margin-top: 5px;
+  list-style: none;
+  position: relative;
+  word-wrap: break-word;
+}
+
+#todoItem_form {
+  margin-top: 15px;
+}
+
+.indent {
+  padding-left: 2.8rem;
+  position: relative;
+
+  .todoItem_drag_handle {
+    position: absolute;
+    left: 0;
+    top: 0.25em;
+    height: 1.43em;
+    width: 1.43em;
+    cursor: move;
+    color: #d9d9d9;
+  }
+
+  .checkbox {
+    padding: 0.25em 0 0.25em 1.9em;
+    position: relative;
+    min-height: 1.4em;
+    display: flex;
+    box-sizing: border-box;
+
+    .checkbox__label {
+      position: absolute;
+      left: 0;
+      top: 0.25em;
+      cursor: pointer;
+
+      .checkbox--true {
+        @include checkbox_base;
+        background-color: #45b488;
+      }
+      .checkbox--false{
+        @include checkbox_base;
+        background-color:#fff;
+      }
+      .checkbox--pending{
+        @include checkbox_base;
+        background-color: #a3d0b3;
+      }
+
+      .checkbox--grey{
+        @include checkbox_base;
+      }
+
+      .checkbox--dark{
+        @include checkbox_base;
+        background-color: #226434;
+        box-shadow: 0 0 8px rgba(0,0,0,0.4);
+      }
+
+      .img--hide{
+        display: none;
+      }
+    }
+
+    .checkbox_content {
+      font-size: 1.1rem;
+      display: block;
+      cursor: pointer;
+      width: 100%;
+
+      .todoItem_description {
+        width: 100%;
+        color:black;
+      }
+
+      .todoItem_notes {
+        opacity: 0.5;
+        color:#877457;
+        display: inline-block;
+        top: -1px;
+        height: 1.6em;
+        vertical-align: middle;
+        font-size: 0.875em;
+        line-height: 1.5;
+        margin-left: 0.15em;
+      }
+
+      .todoItem_date_icon {
+        opacity: 0.5;
+        color: #afb52b;
+        display: inline-block;
+        top: -1px;
+        height: 1.6em;
+        vertical-align: middle;
+        font-size: 0.875em;
+        line-height: 1.5;
+        margin-left: 0.15em;
+      }
+
+      .todoItem_date {
+        display: inline-block;
+        position: relative;
+        top: -8px;
+        vertical-align: middle;
+        font-size: 0.875em;
+        line-height: 1.5;
+        color: #877457;
+        margin-left: 0.15em;
+      }
+    }
+  }
+
+
+
+}

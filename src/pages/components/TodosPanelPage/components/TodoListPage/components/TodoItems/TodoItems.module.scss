@@ -1,0 +1,19 @@
+@import "src/pages/components/TodosPanelPage/components/responsive";
+
+.todoItem_remaining {
+  margin-top: 5px;
+  min-height: 00.25em;
+  padding-left: 0;
+}
+
+.todoItem {
+  margin-top: 5px;
+  list-style: none;
+  position: relative;
+  word-wrap: break-word;
+}
+
+#todoItem_form {
+  margin-top: 15px;
+}
+

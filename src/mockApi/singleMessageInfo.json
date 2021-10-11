@@ -1,0 +1,14 @@
+{
+  "id": 1,
+  "messageTitle": "M1",
+  "posterUserId": 7,
+  "posterUser": "Snow",
+  "content": null,
+  "messageCategoryId": 3,
+  "messageCategoryName": "Heartbeat",
+  "messageCategoryEmoji": "❤️",
+  "docURL": null,
+  "postTime": "2021-07-07T13:23:55.230097+08:00",
+  "originNotes": null,
+  "subscribersIds": "1,2,3"
+}

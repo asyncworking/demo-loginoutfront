@@ -1,0 +1,14 @@
+$MD: 768px;
+
+@mixin MQ($canvas) {
+  @if $canvas==MD {
+    @media screen and (max-width: $MD) {
+      @content;
+    }
+  }
+  @else if $canvas==LG {
+    @media screen and (min-width: $MD) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 12
+    commands:
+      - pwd
+      - ls -al
+      - yarn install        
+  build:
+    commands:
+      - pwd
+      - ls -al
+      - REACT_APP_ASYNC_WORK_API=https://api.uat.asyncworking.com/api/v1 yarn build
+      #- REACT_APP_ASYNC_WORK_API=https://api.asyncworking.com/api/v1 yarn build  swap to api.uat to connect to backend 
+      - pwd
+      - echo ${OWNER} finished build
+artifacts:
+  base-directory: ./build
+  files:
+    - '**/*'
+  name: AP-SOUTHEAST-2
+cache:
+  paths:
+    - './node_modules/**/*'
+# env: 
+#   variables: 
+#     PROJECT_NAME: "flamingo-uat"
+#     PROJECT_OWNER: "John.Wu"
+
+
+# phases:
+#   install:
+#     commands: 
+#       - echo installing
+#       - echo ${PROJECT_OWNER}
+#       - pwd 
+#       - ls -al      
+#   build:
+#     commands:
+#       - echo Building...
+#       - echo ${PROJECT_NAME}
+#       - echo $AWS_REGION-$(date +%Y-%m-%d)
+#       - pwd
+#       - ls -al
+# artifacts:
+#   #base-directory: ./build
+#   files:
+#     - '**/*'
+#   discard-paths: yes 
+#   name: $AWS_REGION-$(date +%Y-%m-%d)
+#   # secondary-artifacts:
+#   #   artifact1:
+#   #     files:
+#   #       - 'public/*'
+#   #     name: ${PROJECT_OWNER}-secondary-artifact-myname-$(date +%Y-%m-%d) 
+#   #   artifact2:
+#   #     files:
+#   #       - './*.yml'
+#   #     name: secondary-artifact-name-2

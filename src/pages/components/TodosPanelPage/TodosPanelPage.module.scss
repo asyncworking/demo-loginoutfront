@@ -1,0 +1,32 @@
+@import "src/pages/components/CompanyPanel/components/EditCompany/components/CompanyProfile/_responsive.scss";
+
+.todosPanel{
+  @include MQ(MD) {
+    width: 100%;
+  }
+  @include MQ(LG) {
+    width: 70%;
+  }
+  margin: auto;
+  position: relative;
+}
+
+.mainPaper{
+  @include MQ(MD) {
+    margin: 0 auto 10rem;
+    padding: 3rem;
+  }
+
+  @include MQ(LG) {
+    margin: auto;
+    border-radius: 5px;
+    padding: 5rem;
+  }
+  top: -8px;
+  box-sizing: border-box;
+  max-width: 53em;
+  min-height: 100vh;
+  background: #fff;
+  overflow: hidden;
+  position: relative;
+}
