@@ -4,7 +4,8 @@ import ISignUp from '../common/interfaces/ISignUp';
 import IResendEmail from '../common/interfaces/IResendEmail';
 import IVerifyEmailExists from '../common/interfaces/IVerifyEmailExists';
 
-const baseUrl = process.env.REACT_APP_ASYNC_WORK_API;
+// const baseUrl = process.env.REACT_APP_ASYNC_WORK_API;
+const baseUrl = 'http://localhost:8080/api/v1';
 
 axios.interceptors.response.use(
   (res: any) => res,

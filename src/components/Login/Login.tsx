@@ -7,7 +7,6 @@ import {
 import welcome from 'src/assets/svgs/welcome.svg';
 import LoginForm from './components/LoginForm/LoginForm';
 import useStyles from './Login.style';
-import Footer from '../Footer/Footer';
 
 const Login = () => {
   const classes = useStyles();
@@ -24,7 +23,6 @@ const Login = () => {
             Log in
           </Typography>
           <LoginForm />
-          <Footer isLoginPage />
         </Grid>
         <Hidden smDown>
           <Grid item>

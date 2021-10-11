@@ -7,7 +7,6 @@ import {
   Redirect,
 } from 'react-router-dom';
 import { ThemeProvider } from '@material-ui/core/styles';
-import Footer from 'src/components/Footer/Footer';
 import SignupContainer from '../components/Signup/SignupContainer';
 import EmailActivationPage from '../components/Signup/components/EmailActivationPage/EmailActivationPage';
 import FirstLoginContainer from '../components/FirstLogin/FirstLoginContainer';
@@ -29,7 +28,6 @@ const PrivateRoute = ({ component: Component, ...rest }: any) => (
         )
       }
     />
-    <Footer isLoginPage={false} />
   </>
 );
 

@@ -10,7 +10,6 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import SignupForm from './components/SignupForm/SignupForm';
 import './SignupContainer.scss';
-import Footer from '../Footer/Footer';
 
 const useStyles = makeStyles((theme: Theme) => createStyles({
   grid: {
@@ -43,7 +42,6 @@ const SignupContainer: React.FC = () => {
           </Paper>
         </Grid>
       </Container>
-      <Footer isLoginPage={false} />
     </>
   );
 };
