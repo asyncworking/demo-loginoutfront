@@ -1,0 +1,45 @@
+$SM: 414px;
+$MD: 768px;
+$LG: 1024px;
+$XL: 1366px;
+
+@mixin MQ($canvas) {
+  @if $canvas==SM {
+    @media screen and (max-width: $SM) {
+      @content;
+    }
+  }
+  @else if $canvas==MD {
+    @media screen and (min-width: $SM) and (max-width: $MD - 16) {
+      @content;
+    }
+  }
+  @else if $canvas==LG {
+    @media screen and (min-width: $MD) and (max-width: $LG - 16) {
+      @content;
+    }
+  }
+  @else if $canvas==XL {
+    @media screen and (min-width: $LG) {
+      @content;
+    }
+  }
+}
+
+.navbar__menuitem {
+  @include MQ(LG) {
+  }
+  @include MQ(MD) {
+  }
+  @include MQ(SM) {
+  }
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #002649;
+  font-size: 20px;
+  font-weight: bolder;
+}
+.navbar__menuitem:hover {
+  background-color: #f2eae4;
+}

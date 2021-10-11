@@ -1,0 +1,131 @@
+@import "src/pages/components/TodosPanelPage/components/responsive";
+
+.add_todoItem {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 0.75rem 1.5rem 0.5rem 1.5rem;
+  max-width: 600px;
+  border: 1px solid #e5e5e5;
+  border-radius: 0.6rem;
+  background-color: #fff;
+  margin-bottom: 1rem;
+
+  .shake {
+    &_open {
+      animation: shake 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+      transform: translate3d(0, 0, 0);
+      backface-visibility: hidden;
+      perspective: 1000px;
+      background-color: rgb(254, 250, 231);
+    }
+
+    @keyframes shake {
+      10%,
+      90% {
+        transform: translate3d(-2px, 0, 0);
+      }
+
+      20%,
+      80% {
+        transform: translate3d(2px, 0, 0);
+      }
+
+      30%,
+      50%,
+      70% {
+        transform: translate3d(-4px, 0, 0);
+      }
+
+      40%,
+      60% {
+        transform: translate3d(4px, 0, 0);
+      }
+    }
+  }
+
+  .form_invalid {
+    align-items: flex-start;
+    color: red;
+  }
+
+  .add_description {
+    display: flex;
+    flex-direction: row;
+
+    .checkbox_label {
+      left: 0;
+      top: 0.25em;
+      cursor: pointer;
+    }
+
+    .checkbox_button {
+      display: inline-block;
+      width: 1.4em;
+      height: 1.4em;
+      border: 1px solid rgba(0, 0, 0, 0.25);
+      background-color: #fff;
+      border-radius: 0.3em;
+      vertical-align: top;
+      margin-bottom: 10px;
+    }
+
+    .description {
+      margin-left: 10px;
+      width: 100%;
+      outline: 0;
+    }
+    #description {
+      resize: none;
+      width: 100%;
+      font-size: 16px;
+      outline: 0;
+      border: 0px;
+    }
+  }
+
+  .add_notes {
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+
+    .notes_title {
+      width: 8rem;
+      padding-top: 0.6rem;
+      padding-bottom: 0.6rem;
+      text-align: right;
+      padding-right: 1rem;
+    }
+
+    .add_details {
+      font-size: 17px;
+      font-weight: 400;
+      align-items: flex-start;
+      color: #a9a9a9;
+      width: 100%;
+      border: 0;
+      outline: none;
+      cursor: pointer;
+      flex: 1;
+    }
+
+    .richEditor {
+      padding-top: 0.6rem;
+      flex:1;
+    }
+  }
+
+  .add_btnArea {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0 0 0;
+
+    .add_btn {
+      margin: 0 10px 10px 0px;
+    }
+
+    .cancel_btn {
+      margin: 0 10px 10px 0px;
+    }
+  }
+
+}

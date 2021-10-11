@@ -1,0 +1,53 @@
+$primaryColor: #2ab782;
+
+.projectinvitation {
+  &__container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__form {
+    width: 500px;
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px darkgrey, -3px -3px 5px darkgrey;
+  }
+
+  &__title {
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  &__selectbar {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  &__seperatordot {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  &__seperatordot::after {
+    content: " \B7 ";
+    font-size: 15px;
+    font-weight: 900;
+  }
+
+  &__buttoncontainer {
+    display: flex;
+    justify-content: flex-start;
+  }
+}

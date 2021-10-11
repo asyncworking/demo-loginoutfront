@@ -1,0 +1,53 @@
+$MD: 768px;
+
+@mixin MQ($canvas) {
+  @if $canvas==MD {
+    @media screen and (max-width: $MD) {
+      @content;
+    }
+  } @else if $canvas==LG {
+    @media screen and (min-width: $MD) {
+      @content;
+    }
+  }
+}
+
+.projectPanel {
+  @include MQ(MD) {
+    margin: 0 auto 10rem;
+  }
+
+  @include MQ(LG) {
+    margin: auto;
+    border-radius: 10px;
+  }
+  top: 11px;
+  padding: 2rem;
+  box-sizing: border-box;
+  max-width: 53em;
+  min-height: 100vh;
+  background: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+.name {
+  font-size: xx-large;
+  text-align: center;
+  font-weight: bold;
+}
+.description {
+  box-sizing: border-box;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0 50px;
+  text-align: center;
+}
+.projectUserNames {
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+  flex-direction: row;
+}

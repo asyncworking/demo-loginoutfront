@@ -1,0 +1,76 @@
+[
+    {
+        "id": 4,
+        "todoListTitle": "This is the todolist title four",
+        "details": "This is the details four",
+        "todoItemGetDtos": []
+    },
+    {
+        "id": 3,
+        "todoListTitle": "This is the todolist title three",
+        "details": "This is the details three",
+        "todoItemGetDtos": [
+            {
+                "todoItemId": 1,
+                "description": "This is the description one",
+                "notes": "This is the notes one",
+                "dueDate": "2017-10-20"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "todoListTitle": "This is the todolist title two",
+        "details": "This is the todolist details two",
+        "todoItemGetDtos": [
+            {
+                "todoItemId": 3,
+                "description": "This is the description three",
+                "notes": "This is the notes three",
+                "dueDate": "2017-10-23"
+            },
+            {
+                "todoItemId": 2,
+                "description": "This is the description two",
+                "notes": "This is the notes two",
+                "dueDate": "2017-10-10"
+            },
+            {
+                "todoItemId": 1,
+                "description": "This is the description one",
+                "notes": "This is the notes one"
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "todoListTitle": "This is the todolist title one",
+        "details": "This is the todolist details one",
+        "todoItemGetDtos": [
+            {
+                "todoItemId": 4,
+                "description": "This is the description four",
+                "notes": "This is the notes four",
+                "dueDate": "2017-10-24"
+            },
+            {
+                "todoItemId": 3,
+                "description": "This is the description three",
+                "notes": "This is the notes three",
+                "dueDate": "2017-10-10"
+            },
+            {
+                "todoItemId": 2,
+                "description": "This is the description two",
+                "notes": "This is the notes two",
+                "dueDate": ""
+            },
+            {
+                "todoItemId": 1,
+                "description": "This is the description one",
+                "notes": "This is the notes one",
+                "dueDate": "2017-10-10"
+            }
+        ]
+    }
+]

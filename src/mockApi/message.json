@@ -1,0 +1,14 @@
+{
+    "id": 1,
+    "company_id": 1,
+    "project_id": 1,
+    "poster_user_id": 1,
+    "message_title": "First Message",
+    "dor_url": null,
+    "content": "This is the first message",
+    "post_time": "2021-06-28 03:46:11.165138+00",
+    "created_time": "2021-06-28 03:46:11.165138+00",
+    "updated_time": "2021-06-28 03:46:11.165138+00",
+    "origin_notes": "<p>This is the first message</p>",
+    "subscribersIds": "1,2,3"
+}

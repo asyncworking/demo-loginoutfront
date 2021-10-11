@@ -1,0 +1,49 @@
+.message_list {
+  box-sizing: border-box;
+  padding-right: 30px;
+  overflow: hidden;
+  list-style: none;
+  justify-items: left;
+  display: block;
+  height: 80%;
+  flex-direction: column;
+}
+
+.cardWrapper {
+  margin: 0;
+  width: 90%;
+  box-sizing: border-box;
+  display: flex;
+  height: 60px;
+  align-items: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: solid 0.01px #e5e5e5;
+}
+
+.icon {
+  margin-right: 15px;
+  width: 15%;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.content {
+  width: 180px;
+  font-size: 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.messageCategory {
+  font-size: 14px;
+  display: inline;
+}
+
+.description{
+  display: inline; 
+}

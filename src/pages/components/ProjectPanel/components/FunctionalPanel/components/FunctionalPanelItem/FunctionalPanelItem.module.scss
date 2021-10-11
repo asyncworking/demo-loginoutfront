@@ -1,0 +1,14 @@
+.root {
+  min-width: 325px;
+  height: 300px;
+  max-width: 300px;
+  padding-top:10px ;
+  padding-bottom: 10px;
+  font-size: 1.17em;
+  &:hover{
+    cursor: pointer;
+  }
+}
+.divider {
+  height: 100%;
+}

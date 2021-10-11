@@ -1,0 +1,32 @@
+[
+    {
+        "messageCategoryId": 1,
+        "projectId": 1,
+        "categoryName": "Announcement",
+        "emoji": "📢"
+    },
+    {
+        "messageCategoryId": 2,
+        "projectId": 1,
+        "categoryName": "FYI",
+        "emoji": "✨"
+    },
+    {
+        "messageCategoryId": 3,
+        "projectId": 1,
+        "categoryName": "Heartbeat",
+        "emoji": "❤️"
+    },
+    {
+        "messageCategoryId": 4,
+        "projectId": 1,
+        "categoryName": "Pitch",
+        "emoji": "💡"
+    },
+    {
+        "messageCategoryId": 5,
+        "projectId": 1,
+        "categoryName": "Question",
+        "emoji": "👋"
+    }
+]
