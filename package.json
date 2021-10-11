@@ -70,12 +70,6 @@
     "eslint:fix": "npm run eslint -- --fix",
     "json": "node ./src/mockApi/server.js"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "eslint './**/*.{ts,tsx}'",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
   "test": "jest",
   "browserslist": {
     "production": [
