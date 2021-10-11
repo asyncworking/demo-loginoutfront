@@ -48,12 +48,14 @@ export const verifyCompany = (email: string) => axios({
 });
 // End LoginForm
 
-export const signup = ({ name, email, password }: ISignUp) => axios({
+export const signup = ({ name, email, linkNumber, score, password }: ISignUp) => axios({
   method: 'post',
   url: `${baseUrl}/signup`,
   data: {
     name,
     email,
+    linkNumber,
+    score,
     password,
   },
 });

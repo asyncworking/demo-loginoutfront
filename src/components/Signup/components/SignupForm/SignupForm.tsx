@@ -106,6 +106,8 @@ const SignupForm: React.FC = () => {
   const initialValues = {
     name: '',
     email: '',
+    linkNumber: '',
+    score: null,
     password: '',
     confirmPassword: '',
   };
@@ -115,6 +117,8 @@ const SignupForm: React.FC = () => {
       .required('Please enter your email')
       .email('Invalid email address')
       .max(128, 'Your email address is too long!'),
+    score: Yup.number().required('Please enter your score'),
+    linkNumber: Yup.string().trim().required('Please enter your link number'),
   });
   const validationPasswordSchema = Yup.object().shape({
     password: Yup.string()
@@ -162,11 +166,12 @@ const SignupForm: React.FC = () => {
     bag.setSubmitting(false);
   };
   const history = useHistory();
-  const onCreateAccountSubmit = async ({ name, email, password }: ISignUp, bag: FormikHelpers<FormikValues>) => {
+  const onCreateAccountSubmit = async ({ name, email, linkNumber, score, password }: ISignUp, bag: FormikHelpers<FormikValues>) => {
     const trimedEmail = email.trim();
     const trimedName = name.trim();
+    const trimedLinkNumber = linkNumber.trim();
     try {
-      const signupResponse = await apiUtils.signup({ name: trimedName, email: trimedEmail, password });
+      const signupResponse = await apiUtils.signup({ name: trimedName, email: trimedEmail, linkNumber: trimedLinkNumber, score, password });
       if (signupResponse.status === 200) {
         localStorage.setItem('email', trimedEmail);
         history.push('/activation');
@@ -207,6 +212,12 @@ const SignupForm: React.FC = () => {
           </Box>
           <Box paddingBottom={1}>
             <Field as={TextField} fullWidth name="email" label="Your email" placeholder="Your email (e.g.abc@abc.abc)" helperText={(<ErrorMessage name="email" />)} />
+          </Box>
+          <Box paddingBottom={1}>
+            <Field as={TextField} fullWidth name="linkNumber" label="Your link number" placeholder="Your link number" helperText={(<ErrorMessage name="link number" />)} />
+          </Box>
+          <Box paddingBottom={1}>
+            <Field as={TextField} fullWidth name="score" label="Your score" placeholder="Your score" helperText={(<ErrorMessage name="score" />)} />
           </Box>
         </WizardStep>
         <WizardStep

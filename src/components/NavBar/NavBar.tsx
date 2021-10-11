@@ -4,7 +4,6 @@ import {
   Grid,
 } from '@material-ui/core';
 import DropdownMenu from './components/DropdownMenu/DropdownMenu';
-import Item from './components/Item/Item';
 import './NavBar.scss';
 
 const NavBar = () => {
@@ -47,9 +46,7 @@ const NavBar = () => {
             spacing={3}
             direction="row"
             wrap="nowrap"
-          >
-            <Item to="/dashboard/" itemName="Home" />
-          </Grid>
+          />
         </Grid>
         <Grid item xs={2}>
           <DropdownMenu />

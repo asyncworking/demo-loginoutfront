@@ -5,7 +5,7 @@ import {
 import './Home.scss';
 
 const Home: React.FC = () => (
-  <Grid>Home</Grid>
+  <Grid />
 );
 
 export default Home;

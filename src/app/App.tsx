@@ -53,20 +53,8 @@ const App = () => (
         <PublicRoute path="/signup" component={SignupContainer} />
         <PublicRoute path="/activation" component={EmailActivationPage} />
         <PublicRoute path="/verifylink" component={VerifiedPage} />
-        {/* <Route path="/invitations/info" component={InvitationRegisterPage} /> */}
         <PrivateRoute path="/firstlogin" component={FirstLoginContainer} />
         <PrivateRoute path="/dashboard" component={DashBoard} />
-
-        {/* <PrivateRoute path="/company/edit" component={EditCompany} />  */}
-        {/* <PrivateRoute path="/project/:projectId/edit" component={EditProject} /> */}
-        {/* <PrivateRoute path="/project/:projectId/people/users/edit" component={NotFoundPage} /> */}
-        {/* <PrivateRoute path="/project/:projectId/todolistset" component={TodosPanel} /> */}
-        {/* <PrivateRoute exact path="/project/:projectId/messages" component={MessageBoard} />
-        <PrivateRoute path="/project/:projectId/messages/:messageId" component={MessageDetails} />
-        <PrivateRoute path="/project/:projectId/new-message" component={NewMessagePage} />
-        <PrivateRoute exact path="/project/:projectId/todolists/:todolistId" component={TodoListPage} />
-        <PrivateRoute exact path="/project/:projectId/todoitems/:todoItemId" component={TodoItemPage} />
-        <PublicRoute component={NotFoundPage} /> */}
       </Switch>
     </Router>
   </ThemeProvider>
