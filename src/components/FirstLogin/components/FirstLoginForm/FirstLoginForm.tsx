@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from 'react';
 import {
   Button,
@@ -8,7 +9,6 @@ import { useHistory } from 'react-router-dom';
 import { Form, Formik, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import IFirstLogin from '../../../../common/interfaces/IFirstLogin';
-import * as apiUtils from '../../../../utils/apiUtils';
 import FirstLoginErrorMessage from '../FirstLoginErrorMessage/FirstLoginErrorMessage';
 
 const FirstLoginForm: React.FC = () => {
@@ -26,22 +26,7 @@ const FirstLoginForm: React.FC = () => {
   });
   const history = useHistory();
   const firstLoginOnSubmit = async ({ company, title }: IFirstLogin) => {
-    const email = localStorage.getItem('email');
-    const trimedCompany = company.trim();
-    try {
-      const companyResponse = await apiUtils.createCompany({ email, company: trimedCompany, title });
-      if (companyResponse.status === 200) {
-        localStorage.setItem('companyId', companyResponse.data);
-        history.push('/dashboard');
-      }
-    } catch (error) {
-      if (error.response.status >= 500) {
-        setWarning({
-          shown: true,
-          message: 'Internal server problem, please try again!',
-        });
-      }
-    }
+    history.push('/dashboard');
   };
 
   return (

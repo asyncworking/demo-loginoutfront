@@ -11,7 +11,6 @@ import {
 } from '@material-ui/core';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
-import logo from '../../../../assets/svgs/logoWithoutTexts.svg';
 import './EmailActivationPage.scss';
 import EmailActivationWindow from './components/EmailActivationWindow/EmailActivationWindow';
 
@@ -50,13 +49,12 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
 
 const EmailActivationPage = () => {
   const classes = useStyles();
-  const titleName = 'Sign up to Async Working';
+  const titleName = 'Sign up';
   return (
     <ThemeProvider theme={themePalette}>
       <Container maxWidth="xs">
         <Grid container wrap="nowrap" direction="column" className={classes.grid}>
           <Box component="span" m={1}>
-            <img src={logo} className="img" alt="logo" />
             <Typography variant="h5" color="primary" className={classes.title}>
               {titleName}
             </Typography>

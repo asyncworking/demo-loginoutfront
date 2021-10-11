@@ -9,7 +9,6 @@ import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import SignupForm from './components/SignupForm/SignupForm';
-import logo from '../../assets/svgs/logoWithoutTexts.svg';
 import './SignupContainer.scss';
 import Footer from '../Footer/Footer';
 
@@ -29,13 +28,12 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
 
 const SignupContainer: React.FC = () => {
   const classes = useStyles();
-  const titleName = 'Sign up to Async Working';
+  const titleName = 'Sign up';
   return (
     <>
       <Container maxWidth="xs">
         <Grid container wrap="nowrap" direction="column" className={classes.grid}>
           <Grid container justify="center" alignItems="center" direction="column">
-            <img src={logo} className="img" alt="logo" />
             <Typography component="h1" variant="h5" color="primary" className={classes.title}>
               {titleName}
             </Typography>

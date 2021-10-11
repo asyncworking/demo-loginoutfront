@@ -9,7 +9,6 @@ import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import FirstLoginForm from './components/FirstLoginForm/FirstLoginForm';
-import logo from '../../assets/svgs/logoWithoutTexts.svg';
 import './FirstLoginContainer.scss';
 
 const useStyles = makeStyles((theme: Theme) => createStyles({
@@ -32,13 +31,12 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
 
 const FirstLoginContainer: React.FC = () => {
   const classes = useStyles();
-  const titleName = 'Welcome to Async Working';
-  const welcomeContent = 'Please tell us a bit about yourself and your company.';
+  const titleName = 'Welcome';
+  const welcomeContent = 'Please tell us a bit about yourself.';
   return (
     <Container maxWidth="xs">
       <Grid container wrap="nowrap" direction="column" className={classes.grid}>
         <Grid container justify="center" alignItems="center" direction="column">
-          <img src={logo} className="img" alt="logo" />
           <Typography variant="h5" color="primary" className={classes.title}>
             {titleName}
           </Typography>

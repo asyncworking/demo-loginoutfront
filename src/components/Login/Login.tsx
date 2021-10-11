@@ -5,7 +5,6 @@ import {
   Hidden,
 } from '@material-ui/core';
 import welcome from 'src/assets/svgs/welcome.svg';
-import logo from '../../assets/svgs/logoWithoutTexts.svg';
 import LoginForm from './components/LoginForm/LoginForm';
 import useStyles from './Login.style';
 import Footer from '../Footer/Footer';
@@ -21,9 +20,8 @@ const Login = () => {
         className={classes.background}
       >
         <Grid item className={classes.form}>
-          <img src={logo} className="img" alt="logo" />
           <Typography className={classes.title}>
-            Log in to Async Working
+            Log in
           </Typography>
           <LoginForm />
           <Footer isLoginPage />

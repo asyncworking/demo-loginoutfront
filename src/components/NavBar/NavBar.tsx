@@ -4,7 +4,6 @@ import {
   Grid,
 } from '@material-ui/core';
 import DropdownMenu from './components/DropdownMenu/DropdownMenu';
-import AwLogo from './components/AwLogo';
 import Item from './components/Item/Item';
 import './NavBar.scss';
 
@@ -33,9 +32,6 @@ const NavBar = () => {
   return (
     <Grid>
       <nav className={navbarClass.join(' ')}>
-        <Grid item xs={2}>
-          <AwLogo />
-        </Grid>
         <Grid
           item
           container
