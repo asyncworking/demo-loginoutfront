@@ -6,40 +6,39 @@ import {
   Link,
   useLocation,
 } from 'react-router-dom';
-import * as apiUtils from '../../../../../../utils/apiUtils';
-import './VerifiedMessageWindow.scss';
+import * as apiUtils from 'src/utils/apiUtils';
+import useStyles from './VerifiedMessageWindow.style';
 
 function useQuery() {
   return new URLSearchParams(useLocation().search);
 }
 
 const VerifiedMessageWindow = () => {
+  const classes = useStyles();
   const query = useQuery();
-  const verifiedLink = async () => {
+  const verifiedLink = () => {
     const code = query.get('code');
-    const verifyResponse = await apiUtils.verifyActiveUser(code);
-    if (verifyResponse.status === 200) {
-      // eslint-disable-next-line no-console
-      console.log('success');
-    }
+    apiUtils.verifyActiveUser(code);
   };
   useEffect(() => {
     verifiedLink();
-  });
+  }, []);
+
   return (
     <div>
-      <h3>Congratulations! Your account has been successfully activated.</h3>
-      <p>
-        You can now login your account and start async working!
+      <h3 className={classes.header}>Congratulations!</h3>
+      <p className={classes.notification}>
+        Your account has been successfully activated and you can login to your account.
       </p>
-      <Link to="/login">
+      <Link className={classes.login_link} to="/login">
         <Button
           type="button"
           variant="contained"
           fullWidth
+          className={classes.login_button}
           color="primary"
         >
-          Sign In Now
+          Log in now
         </Button>
       </Link>
     </div>
